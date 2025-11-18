@@ -48,8 +48,7 @@ body {
     top: 95px;
     width: 100%;
     text-align: center;
-    font-size: 14px;
-    color: #ffcc66;
+    transform: translateX(-50px); /* 왼쪽으로 이동 */
 }
 
 /* 왼쪽 메뉴 */
