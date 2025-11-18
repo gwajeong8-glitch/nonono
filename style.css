@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+}
+
+.wrap {
+    width: 1024px;
+    height: 490px;
+    margin: 0 auto;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+/* 상단 탭 */
+.top-menu {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    display: flex;
+    gap: 20px;
+}
+
+.top-menu .menu {
+    background: rgba(160,160,160,0.3);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* 제목 */
+.title {
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* 서브 문구 */
+.subtitle {
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #ffcc66;
+}
+
+/* 왼쪽 메뉴 */
+.left-menu {
+    position: absolute;
+    left: 40px;
+    top: 110px;
+    width: 120px;
+    line-height: 19px;
+    font-size: 13px;
+}
+
+/* 표 */
+.data-table {
+    position: absolute;
+    top: 200px;
+    left: 180px;
+    width: 800px;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.data-table th {
+    background: rgba(200, 220, 255, 0.8);
+    color: #000;
+    height: 38px;
+}
+
+.data-table td {
+    background: rgba(255,255,255,0.1);
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* 행 배경색 (연두색) */
+.row1 td, .row2 td, .row3 td, .row4 td {
+    background: rgba(120,180,60,0.7);
+}
+
+/* 하단 안내 */
+.notice {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    line-height: 15px;
+    opacity: 0.85;
+}
