@@ -1,198 +1,109 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <title>실시간 데이터 현황</title>
-
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-
-    /* 전체 캔버스 */
-    .canvas {
-        width: 1024px;
-        height: 490px;
-        position: relative;
-        background-size: cover;
-        background-position: center;
-        overflow: hidden;
-        color: white;
-        font-family: "Nanum Gothic", sans-serif;
-    }
-
-    /* 상단 탭 메뉴 */
-    .top-menu {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 980px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .tab {
-        background: rgba(255,255,255,0.2);
-        padding: 8px 20px;
-        border-radius: 5px;
-        font-size: 15px;
-    }
-
-    /* 중앙 제목 */
-    .title {
-        position: absolute;
-        top: 90px;
-        width: 100%;
-        text-align: center;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    /* 설명 문구 */
-    .subtitle {
-        position: absolute;
-        top: 140px;
-        width: 100%;
-        text-align: center;
-        font-size: 15px;
-        color: #f6d78e;
-    }
-
-    /* 좌측 메뉴 */
-    .side-menu {
-        position: absolute;
-        top: 120px;
-        left: 40px;
-        font-size: 13px;
-        line-height: 22px;
-        width: 120px;
-        text-align: left;
-    }
-
-    /* 오른쪽 테이블 */
-    .table-area {
-        position: absolute;
-        top: 180px;
-        left: 180px;
-    }
-
-    table {
-        border-collapse: collapse;
-        width: 760px;
-        font-size: 15px;
-        text-align: center;
-    }
-
-    th {
-        background: #c8d9fb;
-        padding: 10px;
-        color: black;
-    }
-
-    td {
-        padding: 10px;
-        color: black;
-    }
-
-    /* 행 색상 */
-    .row-green {
-        background: #a6e07a;
-        font-weight: bold;
-    }
-
-    /* 하단 안내문 */
-    .notice {
-        position: absolute;
-        bottom: 15px;
-        width: 100%;
-        text-align: center;
-        font-size: 12px;
-        opacity: 0.9;
-    }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="canvas">
+<div class="wrap">
 
     <!-- 상단 탭 -->
     <div class="top-menu">
-        <div class="tab">블레스 전국 프레스티지 서비스</div>
-        <div class="tab">VIP 회원 전용 통합 매니지먼트</div>
-        <div class="tab">노블레스 회원 전용</div>
+        <div class="menu">블레스 전국 프레스티지 서비스</div>
+        <div class="menu">VIP 회원 전용 통합 매니지먼트</div>
+        <div class="menu">노블레스 회원 전용룸</div>
     </div>
 
-    <!-- 중앙 제목 -->
+    <!-- 제목 -->
     <div class="title">실시간 데이터 현황</div>
 
-    <!-- 설명 문구 -->
+    <!-- 서브 문구 -->
     <div class="subtitle">
-        당신의 취향을 공유하며, 뜨거운 교감을 나눌 운명의 파트너.  
+        당신의 취향을 공유하며, 뜨거운 교감을 나눌 은밀한 파트너.
         은밀한 만남을 통해 최상의 만족감을 경험하세요.
     </div>
 
-    <!-- 좌측 메뉴 -->
-    <div class="side-menu">
+    <!-- 왼쪽 메뉴 -->
+    <div class="left-menu">
         메인 화면<br>
         [매칭/고객 상태]<br>
         주문 상태<br>
         인증 상태<br>
         [상담/문의]<br>
-        접수 문의<br>
+        직무 문의<br>
         전국 만남<br>
         [관리/데이터]<br>
         실시간 데이터<br>
-        데이터 상태<br>
+        데이터 분석<br>
         포인트 조회<br>
         유흥 관리<br>
         회원 관리<br>
         회원 승인<br>
         회원 탈퇴<br>
-        담당 실장
+        담당 실장<br>
     </div>
 
-    <!-- 오른쪽 테이블 -->
-    <div class="table-area">
-        <table>
-            <tr>
-                <th>번호</th>
-                <th>선택 유형</th>
-                <th>포인트 금액</th>
-                <th>환불 금액</th>
-                <th>정확도</th>
-                <th>데이터 상태</th>
-                <th>서비스</th>
-            </tr>
+    <!-- 표 -->
+    <table class="data-table">
+        <thead>
+        <tr>
+            <th>번호</th>
+            <th>선택 유형</th>
+            <th>포인트 금액</th>
+            <th>환불 금액</th>
+            <th>정확도</th>
+            <th>데이터 상태</th>
+            <th>서비스</th>
+        </tr>
+        </thead>
 
-            <tr class="row-green">
-                <td>1</td><td>선택 가능</td><td>120,000</td><td>250,000</td><td>100%</td><td>정상</td><td>매진</td>
-            </tr>
-
-            <tr class="row-green">
-                <td>2</td><td>선택 가능</td><td>230,000</td><td>276,000</td><td>100%</td><td>정상</td><td>매진</td>
-            </tr>
-
-            <tr class="row-green">
-                <td>3</td><td>선택 가능</td><td>570,000</td><td>584,000</td><td>100%</td><td>정상</td><td>매진</td>
-            </tr>
-
-            <tr class="row-green">
-                <td>4</td><td>선택 가능</td><td>730,000</td><td>876,000</td><td>100%</td><td>정상</td><td>매진</td>
-            </tr>
-        </table>
-    </div>
+        <tbody>
+        <tr class="row1">
+            <td>1</td>
+            <td>선택 가능</td>
+            <td>120,000</td>
+            <td>250,000</td>
+            <td>100%</td>
+            <td>정상</td>
+            <td>매진</td>
+        </tr>
+        <tr class="row2">
+            <td>2</td>
+            <td>선택 가능</td>
+            <td>230,000</td>
+            <td>276,000</td>
+            <td>100%</td>
+            <td>정상</td>
+            <td>매진</td>
+        </tr>
+        <tr class="row3">
+            <td>3</td>
+            <td>선택 가능</td>
+            <td>570,000</td>
+            <td>584,000</td>
+            <td>100%</td>
+            <td>정상</td>
+            <td>매진</td>
+        </tr>
+        <tr class="row4">
+            <td>4</td>
+            <td>선택 가능</td>
+            <td>730,000</td>
+            <td>876,000</td>
+            <td>100%</td>
+            <td>정상</td>
+            <td>매진</td>
+        </tr>
+        </tbody>
+    </table>
 
     <!-- 하단 안내문 -->
     <div class="notice">
-        [중요 공지] 업무 진행 중 특성 정보를 누락하는 일이 없도록 모든 절차는 담당자의 지시에 따라 신중하게 처리하시기 바랍니다.
-        실시간으로 반영되오니, 항상 확인하여 주십시오.
+        [중요 공지] 업무 진행 중 핵심 정보를 누락하는 일이 없도록 정보를 담당자의 지시에 따라 신중하게 처리하시기 바랍니다.
+        개별적인 업무 처리로 발생하는 모든 결과에 대한 책임은 당사자에게 귀속됩니다.
+        진행 상황은 시스템에 실시간으로 반영되오니, 항상 확인하여 주십시오.
     </div>
 
 </div>
