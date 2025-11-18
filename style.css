@@ -53,7 +53,7 @@ body{
 }
 .subtitle{
     position:absolute;
-    top:115px;
+    top:95px;
     width:100%;
     text-align:center;
     transform:translateX(-5px);
