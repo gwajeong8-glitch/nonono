@@ -16,7 +16,6 @@ body {
     background-position: center;
 }
 
-
 /* 상단 탭 */
 .top-menu {
     position: absolute;
@@ -59,8 +58,21 @@ body {
     left: 40px;
     top: 110px;
     width: 120px;
-    line-height: 19px;
+    line-height: 20px;
     font-size: 13px;
+}
+
+.left-item {
+    padding: 3px 0;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+/* 활성 메뉴 */
+.left-item.active {
+    color: #ffdd66;
+    font-weight: 700;
+    text-shadow: 0 0 6px #ffdd66;
 }
 
 /* 표 */
@@ -86,7 +98,7 @@ body {
     border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
-/* 행 배경색 (연두색) */
+/* 행 배경색 */
 .row1 td, .row2 td, .row3 td, .row4 td {
     background: rgba(120,180,60,0.7);
 }
