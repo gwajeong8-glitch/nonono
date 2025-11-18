@@ -29,3 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (rowBg) rowBg.addEventListener("input", e => setVar('--table-row-bg', e.target.value));
     if (rowText) rowText.addEventListener("input", e => setVar('--table-row-text', e.target.value));
 });
+
+// ==================== 제목 변경 ====================
+document.getElementById("titleInput").addEventListener("input", (e) => {
+    document.querySelector(".title").textContent = e.target.value || "실시간 데이터 현황";
+});
