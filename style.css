@@ -44,7 +44,7 @@ body{
 /* 제목 / 서브 */
 .title{
     position:absolute;
-    top:140px;
+    top:125px;
     width:100%;
     text-align:center;
     font-size:28px;
@@ -86,7 +86,7 @@ body{
 /* 표 (한 번만 정의) */
 .data-table{
     position:absolute;
-    top:200px;     /* 이 값만 수정하면 표의 위치가 바뀝니다 */
+    top:180px;     /* 이 값만 수정하면 표의 위치가 바뀝니다 */
     left:160px;    /* 이 값만 수정하면 표의 좌우 위치가 바뀝니다 */
     width:800px;
     border-collapse:collapse;
