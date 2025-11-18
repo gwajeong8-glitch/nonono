@@ -35,7 +35,7 @@ body {
 /* 제목 */
 .title {
     position: absolute;
-    top: 180px;
+    top: 160px;
     width: 100%;
     text-align: center;
     font-size: 28px;
@@ -45,7 +45,7 @@ body {
 /* 서브 문구 */
 .subtitle {
     position: absolute;
-    top: 135px;
+    top: 155px;
     width: 100%;
     text-align: center;
     font-size: 15px;
