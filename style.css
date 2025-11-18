@@ -79,7 +79,7 @@ body {
 .data-table {
     position: absolute;
     top: 200px;
-    left: 150px;
+    left: 160px;
     width: 800px;
     border-collapse: collapse;
     font-size: 15px;
@@ -106,7 +106,7 @@ body {
 /* 하단 안내 */
 .notice {
     position: absolute;
-    bottom: 50px;
+    bottom: 60px;
     width: 100%;
     text-align: center;
     font-size: 11px;
