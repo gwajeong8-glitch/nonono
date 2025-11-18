@@ -7,15 +7,28 @@
 </head>
 <body>
 
-<div class="wrap">
-
-    <!-- ★ 색상 설정 패널 -->
-    <div class="color-panel">
-        <label>헤더 배경 <input type="color" id="headerBgColor" value="#2196F3"></label>
-        <label>헤더 글자 <input type="color" id="headerTextColor" value="#ffffff"></label>
-        <label>행 배경 <input type="color" id="rowBgColor" value="#1B5E20"></label>
-        <label>행 글자 <input type="color" id="rowTextColor" value="#C8F7DC"></label>
+<!-- ★ 표 색상 변경 UI -->
+<div class="color-controls">
+    <div>
+        <label>헤더 배경:</label>
+        <input type="color" id="headerBgColor" value="#2196F3">
     </div>
+    <div>
+        <label>헤더 글자:</label>
+        <input type="color" id="headerTextColor" value="#ffffff">
+    </div>
+    <div>
+        <label>행 배경:</label>
+        <input type="color" id="rowBgColor" value="#1B5E20">
+    </div>
+    <div>
+        <label>행 글자:</label>
+        <input type="color" id="rowTextColor" value="#C8F7DC">
+    </div>
+</div>
+
+
+<div class="wrap">
 
     <!-- 상단 탭 -->
     <div class="top-menu">
@@ -68,11 +81,41 @@
         </thead>
 
         <tbody>
-        <tr>
+        <tr class="row1">
             <td contenteditable="true">1</td>
             <td contenteditable="true">선택 가능</td>
             <td contenteditable="true">120,000</td>
             <td contenteditable="true">250,000</td>
+            <td contenteditable="true">100%</td>
+            <td contenteditable="true">정상</td>
+            <td contenteditable="true">매진</td>
+        </tr>
+
+        <tr class="row2">
+            <td contenteditable="true">2</td>
+            <td contenteditable="true">선택 가능</td>
+            <td contenteditable="true">230,000</td>
+            <td contenteditable="true">276,000</td>
+            <td contenteditable="true">100%</td>
+            <td contenteditable="true">정상</td>
+            <td contenteditable="true">매진</td>
+        </tr>
+
+        <tr class="row3">
+            <td contenteditable="true">3</td>
+            <td contenteditable="true">선택 가능</td>
+            <td contenteditable="true">570,000</td>
+            <td contenteditable="true">584,000</td>
+            <td contenteditable="true">100%</td>
+            <td contenteditable="true">정상</td>
+            <td contenteditable="true">매진</td>
+        </tr>
+
+        <tr class="row4">
+            <td contenteditable="true">4</td>
+            <td contenteditable="true">선택 가능</td>
+            <td contenteditable="true">730,000</td>
+            <td contenteditable="true">876,000</td>
             <td contenteditable="true">100%</td>
             <td contenteditable="true">정상</td>
             <td contenteditable="true">매진</td>
@@ -84,6 +127,7 @@
     <div class="notice">
         [중요 공지] 업무 진행 중 핵심 정보를 누락하는 일이 없도록 정보를 담당자의 지시에 따라 신중하게 처리하시기 바랍니다.
         개별적인 업무 처리로 발생하는 모든 결과에 대한 책임은 당사자에게 귀속됩니다.
+        진행 상황은 시스템에 실시간으로 반영되오니, 항상 확인하여 주십시오.
     </div>
 
 </div>
