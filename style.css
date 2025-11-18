@@ -11,9 +11,11 @@ body {
     height: 490px;
     margin: 0 auto;
     position: relative;
+    background-image: url("vip.png");
     background-size: cover;
     background-position: center;
 }
+
 
 /* 상단 탭 */
 .top-menu {
