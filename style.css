@@ -88,26 +88,38 @@ body {
 }
 
 /* 헤더 (메인 블루) */
-.data-table th {
-    background: #2196F3;        /* 메인 블루 */
-    color: #ffffff;
-    height: 38px;
-    border-bottom: 2px solid #1976D2; /* 조금 더 진한 블루 */
+.data-table {
+    position: absolute;
+    top: 200px;
+    left: 160px;
+    width: 800px;
+    border-collapse: collapse;
+    font-size: 15px;
+    overflow: hidden;
 }
 
-/* 셀 (짙은 고급 녹색) */
+/* 헤더 */
+.data-table th {
+    background: var(--table-header-bg);
+    color: var(--table-header-text);
+    height: 38px;
+    border-bottom: 2px solid var(--table-border);
+}
+
+/* 바디 */
 .data-table td {
-    background: #1B5E20;       /* 딥 그린 */
+    background: var(--table-row-bg);
+    color: var(--table-row-text);
     padding: 10px;
     text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.10);
-    color: #C8F7DC;            /* 라이트 민트 */
+    border-bottom: 1px solid var(--table-border);
 }
 
-/* 행 호버 효과 (고급스럽게) */
+/* 행에 마우스 올렸을 때 (선택 사항) */
 .data-table tr:hover td {
-    background: rgba(0, 143, 90, 0.45); /* 더 진하게 */
+    background: rgba(255,255,255,0.08);
 }
+
 
 
 /* 하단 안내 */
