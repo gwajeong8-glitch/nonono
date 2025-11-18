@@ -78,7 +78,7 @@ body {
 /* 표 */
 .data-table {
     position: absolute;
-    top: 240px;
+    top: 200px;
     left: 180px;
     width: 800px;
     border-collapse: collapse;
