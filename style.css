@@ -106,7 +106,7 @@ body {
 /* 하단 안내 */
 .notice {
     position: absolute;
-    bottom: 24px;
+    bottom: 50px;
     width: 100%;
     text-align: center;
     font-size: 11px;
