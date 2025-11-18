@@ -87,7 +87,7 @@ body{
 .data-table{
     position:absolute;
     top:170px;     /* 이 값만 수정하면 표의 위치가 바뀝니다 */
-    left:160px;    /* 이 값만 수정하면 표의 좌우 위치가 바뀝니다 */
+    left:140px;    /* 이 값만 수정하면 표의 좌우 위치가 바뀝니다 */
     width:800px;
     border-collapse:collapse;
     font-size:15px;
