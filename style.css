@@ -86,16 +86,6 @@ body {
     text-shadow: 0 0 6px #ffdd66;
 }
 
-/* 표 */
-.data-table {
-    position: absolute;
-    top: 100px;
-    left: 200px;
-    width: 800px;
-    border-collapse: collapse;
-    font-size: 15px;
-    overflow: hidden;   /* 오른쪽 흰색줄 생기면 이걸로 제거됨 */
-}
 
 /* 헤더 (메인 블루) */
 .data-table {
