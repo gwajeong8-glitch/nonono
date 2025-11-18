@@ -81,26 +81,27 @@ body {
     position: absolute;
     top: 200px;
     left: 160px;
-    width: 850px;
+    width: 800px;
     border-collapse: collapse;
     font-size: 15px;
+    overflow: hidden;   /* 오른쪽 흰색줄 생기면 이걸로 제거됨 */
 }
 
-/* 헤더 (진한 하늘색) */
+/* 헤더 (메인 블루) */
 .data-table th {
-    background: #1E90FF;      /* 진한 하늘색 */
+    background: #2196F3;        /* 메인 블루 */
     color: #ffffff;
     height: 38px;
-    border-bottom: 2px solid #0073CC;  /* 살짝 더 진한 하늘색 */
+    border-bottom: 2px solid #1976D2; /* 조금 더 진한 블루 */
 }
 
-/* 셀 (진한 녹색 톤 섞은 반투명) */
+/* 셀 (짙은 고급 녹색) */
 .data-table td {
-    background: rgba(0, 143, 90, 0.25); /* 진한 녹색 + 투명 */
-    padding: 8px;
+    background: #1B5E20;       /* 딥 그린 */
+    padding: 10px;
     text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.15);
-    color: #d9ffe8;   /* 연하늘~연녹색 글자 */
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    color: #C8F7DC;            /* 라이트 민트 */
 }
 
 /* 행 호버 효과 (고급스럽게) */
