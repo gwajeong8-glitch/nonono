@@ -55,8 +55,8 @@ body {
 /* 왼쪽 메뉴 */
 .left-menu {
     position: absolute;
-    left: 40px;
-    top: 50px;
+    left: 45px;
+    top: 40px;
     width: 110px;
     line-height: 20px;
     font-size: 13px;
