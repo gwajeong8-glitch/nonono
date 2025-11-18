@@ -83,17 +83,17 @@ body{
     text-shadow:0 0 6px #ffdd66;
 }
 
-/* ========== 표 (중복 제거하고 한 번만 정의) ========== */
+/* 표 (한 번만 정의) */
 .data-table{
     position:absolute;
-    top:200px;          /* 원하면 이 값만 조절하면 표 위치 이동됨 */
-    left:160px;         /* 원하면 이 값만 조절하면 표 위치 이동됨 */
+    top:200px;     /* 이 값만 수정하면 표의 위치가 바뀝니다 */
+    left:160px;    /* 이 값만 수정하면 표의 좌우 위치가 바뀝니다 */
     width:800px;
     border-collapse:collapse;
     font-size:15px;
-    z-index:4;          /* 색상 패널(z-index:6)이 위에 있으면 패널이 가림 */
+    z-index:4;
     overflow:hidden;
-    box-shadow: 0 2px 0 rgba(0,0,0,0.4);
+    box-shadow:0 2px 0 rgba(0,0,0,0.35);
 }
 
 /* 헤더 */
@@ -133,11 +133,11 @@ body{
     z-index:5;
 }
 
-/* 색상 패널 (표와 겹치지 않도록 오른쪽 상단으로 이동 권장) */
-.color-panel, .color-controls{
-    position:absolute;
+/* 색상 패널 */
+.color-panel{
+    position:fixed;   /* fixed로 하면 화면 스크롤 있어도 보인다 */
     top:60px;
-    right:30px;         /* 오른쪽 상단에 위치 */
+    right:20px;
     background:rgba(0,0,0,0.55);
     padding:8px 12px;
     border-radius:6px;
@@ -145,11 +145,7 @@ body{
     color:#fff;
     display:flex;
     gap:10px;
-    z-index:6;          /* 표 위에 떠있음(필요시 낮추기) */
+    z-index:10;
 }
-.color-panel input[type=color], .color-controls input[type=color]{
-    width:34px;
-    height:22px;
-    border:none;
-    cursor:pointer;
-}
+.color-panel label{ display:flex; align-items:center; gap:6px; white-space:nowrap; }
+.color-panel input[type=color]{ width:34px; height:22px; border:none; cursor:pointer; padding:0; }
