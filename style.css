@@ -104,11 +104,12 @@ body {
 
 /* 하단 안내 */
 .notice {
-    position: absolute;
-    bottom: 60px;
     width: 100%;
-    text-align: center;
-    font-size: 11px;
-    line-height: 15px;
-    opacity: 0.85;
+    font-size: 13px;
+    color: #ffcc66;
+    margin-top: 20px;
+    line-height: 1.5;
+    text-align: left;   /* ← 왼쪽 정렬 */
+    padding-left: 20px; /* ← 필요하면 살짝 들여쓰기 */
 }
+
