@@ -90,7 +90,7 @@ body {
 /* 헤더 (메인 블루) */
 .data-table {
     position: absolute;
-    top: 200px;
+    top: 150px;
     left: 160px;
     width: 800px;
     border-collapse: collapse;
