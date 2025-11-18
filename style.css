@@ -56,8 +56,8 @@ body {
 .left-menu {
     position: absolute;
     left: 40px;
-    top: 100px;
-    width: 120px;
+    top: 50px;
+    width: 110px;
     line-height: 20px;
     font-size: 13px;
 }
