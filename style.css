@@ -48,7 +48,7 @@ body {
     top: 95px;
     width: 100%;
     text-align: center;
-    transform: translateX(-20px); /* ← 왼쪽으로 이동 */
+    transform: translateX(-5px); /* ← 왼쪽으로 이동 */
     font-size: 14px;
     color: #ffcc66;   /* ← 기존 색상 복구 */
 }
