@@ -86,23 +86,28 @@ body {
     font-size: 15px;
 }
 
+/* 헤더 (진한 하늘색) */
 .data-table th {
-    background: rgba(200, 220, 255, 0.8);
-    color: #000;
+    background: #1E90FF;      /* 진한 하늘색 */
+    color: #ffffff;
     height: 38px;
+    border-bottom: 2px solid #0073CC;  /* 살짝 더 진한 하늘색 */
 }
 
+/* 셀 (진한 녹색 톤 섞은 반투명) */
 .data-table td {
-    background: rgba(255,255,255,0.1);
+    background: rgba(0, 143, 90, 0.25); /* 진한 녹색 + 투명 */
     padding: 8px;
     text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    color: #d9ffe8;   /* 연하늘~연녹색 글자 */
 }
 
-/* 행 배경색 */
-.row1 td, .row2 td, .row3 td, .row4 td {
-    background: rgba(120,180,60,0.7);
+/* 행 호버 효과 (고급스럽게) */
+.data-table tr:hover td {
+    background: rgba(0, 143, 90, 0.45); /* 더 진하게 */
 }
+
 
 /* 하단 안내 */
 .notice {
