@@ -7,27 +7,6 @@
 </head>
 <body>
 
-<!-- ★ 표 색상 변경 UI -->
-<div class="color-controls">
-    <div>
-        <label>헤더 배경:</label>
-        <input type="color" id="headerBgColor" value="#2196F3">
-    </div>
-    <div>
-        <label>헤더 글자:</label>
-        <input type="color" id="headerTextColor" value="#ffffff">
-    </div>
-    <div>
-        <label>행 배경:</label>
-        <input type="color" id="rowBgColor" value="#1B5E20">
-    </div>
-    <div>
-        <label>행 글자:</label>
-        <input type="color" id="rowTextColor" value="#C8F7DC">
-    </div>
-</div>
-
-
 <div class="wrap">
 
     <!-- 상단 탭 -->
@@ -130,6 +109,14 @@
         진행 상황은 시스템에 실시간으로 반영되오니, 항상 확인하여 주십시오.
     </div>
 
+</div>
+
+<!-- ★ 표 색상 변경 UI (오른쪽 상단에 떠있음) -->
+<div class="color-panel" aria-hidden="false">
+    <label>헤더 배경 <input type="color" id="headerBgColor" value="#2196F3"></label>
+    <label>헤더 글자 <input type="color" id="headerTextColor" value="#ffffff"></label>
+    <label>행 배경 <input type="color" id="rowBgColor" value="#1B5E20"></label>
+    <label>행 글자 <input type="color" id="rowTextColor" value="#C8F7DC"></label>
 </div>
 
 <script src="script.js"></script>
