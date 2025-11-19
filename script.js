@@ -1,24 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // ----------------------------------------------------
-    // 1. PNG 다운로드 로직 추가
+// ----------------------------------------------------
+    // 1. PNG 다운로드 로직 추가 (수정됨)
     // ----------------------------------------------------
     const downloadButton = document.getElementById("downloadPngButton");
-    const captureArea = document.getElementById("capture-area");
+    const captureArea = document.getElementById("capture-area"); // wrap 영역
 
     if (downloadButton && captureArea) {
         downloadButton.addEventListener('click', () => {
             // 다운로드 버튼과 색상 패널은 캡처에서 제외하기 위해 잠시 숨김
             downloadButton.style.display = 'none';
-            document.querySelector('.color-panel').style.display = 'none';
+            document.querySelector('.color-panel').style.display = 'none'; // 컬러 패널 숨김
             
             // 캡처 영역 (.wrap 영역)을 캔버스로 변환
             html2canvas(captureArea, {
-                // useCORS: true, // 외부 이미지 사용 시 주석 해제 (vip.png가 외부 이미지인 경우)
+                width: 1022, // ★ 최종 수정: 캡처 너비를 1022px로 강제 지정하여 오른쪽 2px 여백 제외 ★
+                // useCORS: true, 
             }).then(canvas => {
                 // 캡처 후 다시 표시
                 downloadButton.style.display = 'block';
-                document.querySelector('.color-panel').style.display = 'flex';
+                document.querySelector('.color-panel').style.display = 'flex'; // 컬러 패널 다시 표시
 
                 // 캔버스 데이터를 이미지 URL로 변환 및 다운로드
                 const imageURL = canvas.toDataURL("image/png");
