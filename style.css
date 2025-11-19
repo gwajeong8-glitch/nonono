@@ -4,25 +4,34 @@
     --table-row-bg: #1B5E20;
     --table-row-text: #C8F7DC;
     --table-border: rgba(255,255,255,0.15);
+    
+    /* 특정 셀 색상 변수 */
+    --col-num-text-color: #FFC000;
+    --col-num-bg-color: transparent; 
+    --col-select-text-color: #00FFFF;
+    --col-select-bg-color: transparent; 
+    --col-service-color: #FF0000;
 }
 
 body{
     margin:0;
     padding:0;
     background:#000;
-    font-family:'Noto Sans KR',sans-serif;
+    font-family:Arial, sans-serif;
     color:white;
 }
 
-/* 래퍼 */
+/* 래퍼 (배경 이미지 미세한 틈새를 검은색으로 처리) */
 .wrap{
-    width:1024px;
+    width:1024px; /* 원래 너비로 복원 */
     height:490px;
     margin:0 auto;
     position:relative;
     background-image:url("vip.png");
     background-size:cover;
-    background-position:center;
+    background-position: center center; /* 위치 조정 복원 */
+    background-color: #000; /* 미세한 틈을 메울 검은색 배경 */
+    overflow: hidden; /* wrap 범위를 벗어나는 내용 숨김 (미세한 줄 방지) */
 }
 
 /* 상단 탭 */
@@ -83,12 +92,12 @@ body{
     text-shadow:0 0 6px #ffdd66;
 }
 
-/* 표 (한 번만 정의) */
+/* 표 (오른쪽 줄을 덮기 위해 왼쪽 위치를 조정) */
 .data-table{
     position:absolute;
-    top:170px;     /* 이 값만 수정하면 표의 위치가 바뀝니다 */
-    left:160px;    /* 이 값만 수정하면 표의 좌우 위치가 바뀝니다 */
-    width:800px;
+    top:170px;
+    left:159px; /* ★ 최종 조정: 왼쪽 위치를 159px로 설정하여 테이블을 오른쪽으로 1px 이동 ★ */
+    width:802px; /* 너비는 802px를 유지하여 틈이 생기지 않도록 함 */
     border-collapse:collapse;
     font-size:15px;
     z-index:4;
@@ -105,6 +114,9 @@ body{
     border-bottom:2px solid var(--table-border);
     text-align:center;
 }
+.data-table th:last-child {
+    border-right: none;
+}
 
 /* 바디 셀 */
 .data-table td{
@@ -114,6 +126,14 @@ body{
     text-align:center;
     border-bottom:1px solid var(--table-border);
 }
+.data-table td:last-child {
+    border-right: none;
+}
+
+/* 특정 셀 스타일 적용 */
+.data-table tbody tr td:nth-child(1) { color: var(--col-num-text-color); background: var(--col-num-bg-color); font-weight: 700; }
+.data-table tbody tr td:nth-child(2) { color: var(--col-select-text-color); background: var(--col-select-bg-color); }
+.data-table tbody tr td:last-child { color: var(--col-service-color); font-weight: 900; }
 
 /* 호버 */
 .data-table tr:hover td{
@@ -124,18 +144,19 @@ body{
 .notice{
     position:absolute;
     bottom:60px;
-    left:160px;
-    right:160px;
+    left:160px; 
+    right:160px; 
     font-size:11px;
     color:#ffcc66;
     line-height:1.5;
     text-align:left;
     z-index:5;
+    white-space: nowrap; /* 하단 문구 2줄 고정 */
 }
 
 /* 색상 패널 */
 .color-panel{
-    position:fixed;   /* fixed로 하면 화면 스크롤 있어도 보인다 */
+    position:fixed;
     top:60px;
     right:20px;
     background:rgba(0,0,0,0.55);
@@ -144,8 +165,23 @@ body{
     font-size:12px;
     color:#fff;
     display:flex;
+    flex-direction:column;
     gap:10px;
     z-index:10;
 }
-.color-panel label{ display:flex; align-items:center; gap:6px; white-space:nowrap; }
+.color-panel label{ display:flex; align-items:center; justify-content:space-between; gap:6px; white-space:nowrap; }
 .color-panel input[type=color]{ width:34px; height:22px; border:none; cursor:pointer; padding:0; }
+
+/* 컬러 팔레트 스타일 */
+.palette-section {
+    border-top: none; padding-top: 0; margin-top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    padding-bottom: 10px; margin-bottom: 5px;
+}
+.color-palette { display: flex; flex-wrap: wrap; gap: 5px; width: 175px; }
+.color-swatch { 
+    width: 38px; height: 25px; border-radius: 4px; cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s;
+}
+.color-swatch:hover { transform: scale(1.05); border-color: white; }
